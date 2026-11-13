@@ -99,7 +99,7 @@ public class ContactServiceTest {
 	/*
 	 * Test updating first name method individually
 	 */
-	@ Test
+	@Test
 	public void testUpdateFirstNameIndv() {
 		ContactService service = new ContactService();
 		Contact contact = new Contact("010", "Jane", "Doe", "1234567890", "123 Main Street");
@@ -112,7 +112,7 @@ public class ContactServiceTest {
 	/*
 	 * Test updating last name method individually
 	 */
-	@ Test
+	@Test
 	public void testUpdateLastNameIndv() {
 		ContactService service = new ContactService();
 		Contact contact = new Contact("011", "Jane", "Doe", "1234567890", "123 Main Street");
@@ -125,7 +125,7 @@ public class ContactServiceTest {
 	/*
 	 * Test updating phone method individually
 	 */
-	@ Test
+	@Test
 	public void testUpdatePhoneIndv() {
 		ContactService service = new ContactService();
 		Contact contact = new Contact("012", "Jane", "Doe", "1234567890", "123 Main Street");
@@ -138,7 +138,7 @@ public class ContactServiceTest {
 	/*
 	 * Test updating address method individually
 	 */
-	@ Test
+	@Test
 	public void testAddressIndv() {
 		ContactService service = new ContactService();
 		Contact contact = new Contact("013", "Jane", "Doe", "1234567890", "123 Main Street");

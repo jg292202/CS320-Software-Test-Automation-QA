@@ -1,19 +1,74 @@
-# CS320-Software-Test-Automation-QA
+# Contact Service | Software Test Automation
 
-## How can I ensure that my code, program, or software is functional and secure?
+**Java • JUnit 5 • Parameterized Testing • Input Validation • Software Quality Assurance**
 
-I ensure functionality and security by writing through unit tests, applying test-driven development (TDD), and integrating automated testing into CI/CD pipelines.
-I validate edge cases, handle exceptions, and use coverage tools to identify gaps.  For security, I follow secure coding practices, validate inputs, 
-and stay mindful of common vulnerabilities, such as injections and insecure dependencies, by utilizing OWASP dependency check.
+Java contact-management application developed to demonstrate automated unit testing, requirements validation, and quality-focused software development.
 
-## How do I interpret user needs and incorporate them into a program?
+The project separates the contact domain model from service-layer operations and uses JUnit 5 tests to verify expected behavior, validation rules, boundary conditions, and failure cases.
 
-I start by analyzing requirements and breaking them down into testable behaviors.  I would ask clarifying questions when needed and prioritize features
-based on user impact. I use parameterized tests and validation to simulate real-world usage to ensure the software behaves as expected under 
-various conditions.
+## Project Structure
 
-## How do I approach designing software?
+- `Contact.java` - Contact domain model and field validation
+- `ContactService.java` - Contact creation, retrieval, update, and deletion operations
+- `ContactTest.java` - Unit and parameterized tests for the Contact model
+- `ContactServiceTest.java` - Unit tests for ContactService behavior
 
-I approach design with modularity and maintanability in mind.  I define clear classes, isolate responsibilities, and write tests alongside the code
-to guide development.  I prefer simplicity and clarity and use design patterns whenever possible and appropriate.  Documenting my decisions with
-thoughful comments and headers to support future collaboration and auditing.
+## Test Coverage
+
+### Contact Model
+
+Automated tests verify:
+
+- Valid contact creation
+- Required-field validation
+- Null input handling
+- Contact ID length constraints
+- Contact ID immutability
+- First and last name length constraints
+- Phone-number length and numeric-format validation
+- Address length constraints
+- Maximum valid field lengths
+- Successful setter operations
+- Invalid setter input
+
+Parameterized JUnit tests are used to validate multiple invalid contact ID conditions with a shared test implementation.
+
+### Contact Service
+
+Service tests verify:
+
+- Successful contact creation
+- Duplicate contact ID rejection
+- Contact deletion
+- Full contact updates
+- Updates to individual contact fields
+- Rejection of updates for nonexistent contacts
+- Validation of invalid data during updates
+
+## Engineering Approach
+
+The project reinforced an important principle in my software-development approach: requirements are more useful when they can be translated into specific, repeatable tests.
+
+Rather than testing only successful behavior, the test suite exercises boundary conditions, invalid inputs, duplicate data, nonexistent records, and expected failure paths.
+
+This approach has carried into my later backend work, where I use automated tests and API validation to verify authentication, authorization, CRUD behavior, and error handling.
+
+## Technologies & Concepts
+
+- Java
+- JUnit 5
+- Parameterized Testing
+- Unit Testing
+- Object-Oriented Programming
+- Input Validation
+- Boundary Testing
+- Exception Testing
+- CRUD Operations
+- Software Test Automation
+- Software Quality Assurance
+
+## Academic Context
+
+Completed as part of CS 320 Software Test Automation & QA coursework at Southern New Hampshire University.
+
+This repository is presented as a portfolio artifact demonstrating Java development, automated unit testing, requirements validation, and quality-focused software engineering.

@@ -37,7 +37,7 @@ Parameterized JUnit tests are used to validate multiple invalid contact ID condi
 
 Service tests verify:
 
-- Successful contact creation
+- Successful contact addition
 - Duplicate contact ID rejection
 - Contact deletion
 - Full contact updates
@@ -53,6 +53,22 @@ Rather than testing only successful behavior, the test suite exercises boundary 
 
 This approach has carried into my later backend work, where I use automated tests and API validation to verify authentication, authorization, CRUD behavior, and error handling.
 
+## Design & Limitations
+
+This is a focused academic test-automation project rather than a production contact-management application.
+
+The implementation intentionally keeps persistence and application architecture simple so the primary focus remains on requirements validation and automated testing.
+
+If I expanded the application today, I would add:
+
+- A persistence layer rather than maintaining contact data only for the application session
+- Additional service-level validation and error handling
+- Broader automated test coverage for edge and failure conditions
+- Integration testing between application layers
+- Automated build and test execution through CI
+
+The original project is preserved substantially as completed so the repository accurately represents the testing concepts and Java development skills demonstrated during the course.
+
 ## Technologies & Concepts
 
 - Java
@@ -67,8 +83,15 @@ This approach has carried into my later backend work, where I use automated test
 - Software Test Automation
 - Software Quality Assurance
 
+## Repository Contents
+
+- `Contact.java` - Contact model and validation logic
+- `ContactService.java` - Contact-management service
+- `ContactTest.java` - Model validation, boundary, and parameterized tests
+- `ContactServiceTest.java` - Service behavior and failure-path tests
+
 ## Academic Context
 
-Completed as part of CS 320 Software Test Automation & QA coursework at Southern New Hampshire University.
+Completed as part of **CS 320: Software Test Automation & QA** coursework at Southern New Hampshire University.
 
 This repository is presented as a portfolio artifact demonstrating Java development, automated unit testing, requirements validation, and quality-focused software engineering.
